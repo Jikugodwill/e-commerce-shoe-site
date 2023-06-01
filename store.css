@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Caveat', cursive;
+}
+
+header{
+    height: 35%;
+    background: url(https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=400), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+header h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+header form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.search-bar{
+    width: 70%;
+    max-width: 600px;
+    padding: 1.2rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+}
+
+.cats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    color: #2e1c97;
+    font-size: 1.2rem;
+}
+.cats>*{
+    padding: .5rem 1rem;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.cat:hover{
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.product{
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: fit-content;
+    padding: .3rem;
+}
+
+.product img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.buy-btn{
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    background-color: #2e1c97b3;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.buy-btn:hover{
+    background-color: #2e1c97;
+}
+.error{
+    color: rgb(84, 84, 228);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    text-align: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}

@@ -1,0 +1,72 @@
+.home-main{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 3rem 4rem;
+}
+.home-hero{
+  padding: 4px 3rem;
+  background-color: rgb(236, 237, 238);
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: fit-content;
+  min-height: 400px;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-hero_image{
+  flex: 10.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 500px;
+  object-fit: contain;
+  transform: rotateY(180deg);
+  margin-bottom: -100px;
+}
+
+.home-hero_title{
+  font-size: 3rem;
+  font-weight: 600;
+  color: #2e1c97;
+  text-align: center;
+  flex: 0.3;
+  white-space: nowrap;
+}
+
+.home-hero .details{
+  text-align: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  flex: 0.3;
+}
+
+.home-hero .details>*{
+  margin: 12px 0;
+}
+
+.home-hero_shop-link{
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    background-color: #2e1c97b3;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.home-hero_shop-link:hover{
+  background-color: #2e1c97;
+}
