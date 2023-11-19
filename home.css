@@ -1,8 +1,14 @@
+body{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .home-main{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   padding: 3rem 4rem;
+  width: 100%;
 }
 .home-hero{
   padding: 4px 3rem;
@@ -70,3 +76,9 @@
 .home-hero_shop-link:hover{
   background-color: #2e1c97;
 }
+
+/* @media (max-width: 810px){
+  .home-main{
+    margin-top: 100px;
+  }
+} */

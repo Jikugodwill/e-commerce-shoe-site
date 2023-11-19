@@ -10,14 +10,19 @@
   font-family: 'Nanum Myeongjo', serif;
 }
 
-nav{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
+    max-width: 1440px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
 }
 .logo a{
     text-decoration: none;
@@ -65,52 +70,66 @@ nav{
 
 
 
-nav ul{
+.navbar ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex: 0.9;
 }
 
-nav ul li{
+.navbar ul li{
     list-style: none;
     margin-left: 2rem;
+    list-style-type: none;
 }
 
-nav li:last-child{
+.navbar li:last-child{
     margin-right: -2rem;
 }
 
-nav li:not(:last-child){
+.navbar li:not(:last-child){
     margin-right: 2rem;
     cursor: pointer;
 }
-nav div{
+.navbar > div{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     justify-self: flex-end;
-    position: relative;
+    /* position: relative; */
 }
 
 .dropdown{
     position: absolute;
     background-color: #fff;
     border-radius: 0.4rem;
-    top: 2.9rem;
+    top: 3.9rem;
     padding: 1rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     display: none;
+    z-index: 1002;
+}
+.dropup{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    bottom: 4.2rem;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1002;
+    right: .2pc;
 }
 
-nav a{
+.navbar a{
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 900;
 }
 
-nav button{
+.navbar button{
     padding: .5rem 1rem;
     border: none;
     outline: none;
@@ -123,12 +142,12 @@ nav button{
     cursor: pointer;
 }
 
-.user + .dropdown button{
+.user + .dropdown button, .user ~ .dropup button{
     display: block;
     background-color: #2e1c97b3;
 }
 
-nav button:hover{
+.navbar button:hover{
     opacity: 1;
 }
 
@@ -139,4 +158,25 @@ nav button:hover{
     border-radius: 12rem;
     color: #fff;
     font-size: 1rem;
+}
+
+@media (max-width: 512px){
+    .user{
+        border-radius: 50%;
+        padding: .8rem;
+    }
+    .navbar{
+        /* display: none; */
+        /* bottom: 0; */
+        top: unset;
+        bottom: 0;
+    }
+
+    .navbar li:last-child{
+        margin-right: 0px;
+    }
+    
+    .navbar li:not(:last-child){
+        margin-right: 0px;
+    }
 }
