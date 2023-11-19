@@ -119,14 +119,6 @@ const products = [
     image:
       "https://i.pinimg.com/736x/9d/f1/90/9df190f8a5e62c20f0c884982f179c8f.jpg",
   },
-  {
-    id: 15,
-    name: `Nike Air Max 90 OG "Infrared`,
-    price: 55000,
-    category: "Dancing",
-    image:
-      "https://i.pinimg.com/736x/9d/f1/90/9df190f8a5e62c20f0c884982f179c8f.jpg",
-  },
 ];
 
 // <img class="product-image" src="https://via.placeholder.com/300" alt="product">
@@ -144,7 +136,7 @@ const allProducts = (filteredProducts) => {
     .map(
       (product) => `<div class="product">
   <img class="product-image ${!product.image && "blurred"}" src=${
-        product.image || "../assets/defaultShoe.png"
+        product.image || "../assets/defaultShoe.jpg"
       } alt="product">
   <h3 class="product-name">${product.name}</h3>
   <p class="product-cat">${product.category}</p>

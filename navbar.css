@@ -16,6 +16,7 @@ nav{
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 nav .logo{
     color: #fff;
@@ -77,7 +78,7 @@ nav button{
     border: none;
     outline: none;
     border-radius: 0.4rem;
-    background-color: #2e1c97b3;
+    background-color: transparent;
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -85,10 +86,13 @@ nav button{
     cursor: pointer;
 }
 
+.user + .dropdown button{
+    display: block;
+    background-color: #2e1c97b3;
+}
+
 nav button:hover{
-    transform: scale(1.06);
     opacity: 1;
-    background-color: #2e1c97;
 }
 
 .user{
