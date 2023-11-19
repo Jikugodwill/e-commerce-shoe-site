@@ -17,22 +17,59 @@ nav{
     padding: 1rem 2rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
-nav .logo{
-    color: #fff;
-    background-color: rgba(255, 34, 255, 0.701);
+.logo a{
     text-decoration: none;
-    width: 1rem;
-    height: 1rem;
-    padding: 1rem;
-    border-radius: 50%;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    font-size: 1.7rem;
 }
+
+/* decorative text design for a text */
+.logo a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2e1c97b3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.logo a:hover::before{
+    transform: scaleX(1);
+}
+
+.logo a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2e1c97b3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+.logo a:hover::after{
+    transform: scaleX(1);
+}
+
+/* ended */
+
+
 
 nav ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex: 1;
+    flex: 0.9;
 }
 
 nav ul li{
@@ -55,7 +92,7 @@ nav div{
     flex-flow: column nowrap;
     justify-self: flex-end;
     position: relative;
-}                                                                             
+}
 
 .dropdown{
     position: absolute;
