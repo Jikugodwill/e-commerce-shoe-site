@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: 'Caveat', cursive;
+  /* font-family: 'Caveat', cursive; */
+  font-family: 'Nanum Myeongjo', serif;
 }
 
 nav{
@@ -13,22 +16,60 @@ nav{
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
-nav .logo{
-    color: #fff;
-    background-color: rgba(255, 34, 255, 0.701);
+.logo a{
     text-decoration: none;
-    width: 1rem;
-    height: 1rem;
-    padding: 1rem;
-    border-radius: 50%;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    font-size: 1.7rem;
 }
+
+/* decorative text design for a text */
+.logo a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2e1c97b3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.logo a:hover::before{
+    transform: scaleX(1);
+}
+
+.logo a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2e1c97b3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+.logo a:hover::after{
+    transform: scaleX(1);
+}
+
+/* ended */
+
+
 
 nav ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex: 1;
+    flex: 0.9;
 }
 
 nav ul li{
@@ -51,13 +92,13 @@ nav div{
     flex-flow: column nowrap;
     justify-self: flex-end;
     position: relative;
-}                                                                             
+}
 
 .dropdown{
     position: absolute;
     background-color: #fff;
     border-radius: 0.4rem;
-    top: 2.2rem;
+    top: 2.9rem;
     padding: 1rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     display: none;
@@ -74,7 +115,7 @@ nav button{
     border: none;
     outline: none;
     border-radius: 0.4rem;
-    background-color: #2e1c97b3;
+    background-color: transparent;
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -82,12 +123,20 @@ nav button{
     cursor: pointer;
 }
 
+.user + .dropdown button{
+    display: block;
+    background-color: #2e1c97b3;
+}
+
 nav button:hover{
-    transform: scale(1.06);
     opacity: 1;
-    background-color: #2e1c97;
 }
 
 .user{
     cursor: pointer;
+    background-color: #2e1c97b3;
+    padding: 0.6rem 1.5rem;
+    border-radius: 12rem;
+    color: #fff;
+    font-size: 1rem;
 }
