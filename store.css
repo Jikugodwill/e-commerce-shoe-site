@@ -118,13 +118,21 @@ header form{
 }
 
 .product img{
-    width: 100%;
-    min-width: 300px;
-    height: 300px;
+    width: inherit;
+    min-width: inherit;
+    height: inherit;
     object-fit: cover;
     border-bottom: 1px solid #ccc;
     margin-bottom: 1rem;
     transition: all 0.3s ease-in-out;
+}
+
+.img-container{
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .product img:hover{
@@ -169,4 +177,14 @@ header form{
     font-weight: 800;
     margin-bottom: 1rem;
     color: #2e1c97;
+}
+
+@media (max-width: 766px){
+    .cats{
+        flex-flow: row wrap;
+        overflow: scroll;
+    }
+    .cat{
+        padding: .4rem;
+    }
 }

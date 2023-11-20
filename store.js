@@ -135,9 +135,11 @@ const allProducts = (filteredProducts) => {
   productsContainer.innerHTML = filteredProducts
     .map(
       (product) => `<div class="product">
-  <img class="product-image ${!product.image && "blurred"}" src=${
-        product.image || "../assets/defaultShoe.jpg"
-      } alt="product">
+      <div class="img-container">
+      <img class="product-image ${!product.image && "blurred"}" src=${
+            product.image || "../assets/defaultShoe.jpg"
+          } alt="product">
+      </div>
   <h3 class="product-name">${product.name}</h3>
   <p class="product-cat">${product.category}</p>
   <p class="product-price"><span class="unit">FCFA</span><span class="price-value">${
