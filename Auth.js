@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       storeTextHTMLTag.textContent = `${username.FirstName.slice(
         0,
         1
-      )} ${username.LastName.slice(0, 1)}`;
+      )}${username.LastName.slice(0, 1)}`;
     }
 
     logoutBtn.forEach(
